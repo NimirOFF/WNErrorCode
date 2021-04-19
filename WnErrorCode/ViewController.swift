@@ -46,14 +46,9 @@ extension ViewController: UIPickerViewDataSource {
 }
 
 extension ViewController: UIPickerViewDelegate {
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if component == 0 {
-            let device = errorDeta.device[row]
-            return device.rawValue
-        } else {
-            let errorNumber = errorDeta.errorByDevice[row]
-            return String(errorNumber.errorCode)
-        }
+        (component == 0 ? errorDeta.device[row].rawValue : String(errorDeta.errorByDevice[row].errorCode))
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
