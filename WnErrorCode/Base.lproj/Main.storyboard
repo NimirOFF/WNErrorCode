@@ -77,9 +77,6 @@
                                 <state key="normal" title="Показать описание">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="findError:" destination="WcK-zW-DYU" eventType="touchUpInside" id="qGg-gp-5ii"/>
-                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lX-xf-OWn">
                                 <rect key="frame" x="5" y="249" width="404" height="216"/>

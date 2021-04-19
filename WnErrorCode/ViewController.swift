@@ -9,11 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
     @IBOutlet weak var devicePicker: UIPickerView!
     @IBOutlet weak var errorLabel: UILabel!
 
-    
     var errorDeta = DeviceData()
     
     var selectedDevice: Device?
@@ -51,7 +49,7 @@ extension ViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
             let device = errorDeta.device[row]
-            return device.nameDevice
+            return device.rawValue
         } else {
             let errorNumber = errorDeta.errorByDevice[row]
             return String(errorNumber.errorCode)
@@ -62,7 +60,7 @@ extension ViewController: UIPickerViewDelegate {
         if component == 0 {
             let device = errorDeta.device[row]
             selectedDevice = device
-            errorDeta.errorByDevice = errorDeta.getErrors(device_id: device.id)
+            errorDeta.errorByDevice = errorDeta.getErrors(device_id: device)
             pickerView.reloadComponent(1)
             pickerView.selectRow(0, inComponent: 1, animated: true)
             
@@ -70,14 +68,14 @@ extension ViewController: UIPickerViewDelegate {
             selectedError = error
             
             if let device = selectedDevice, let error = selectedError {
-                errorLabel.text = "\(device.nameDevice) \(error.errorCode)"
+                errorLabel.text = "\(device.rawValue) \(error.errorCode)"
             }
         } else {
             let error = self.errorDeta.errorByDevice[row]
             selectedError = error
             
             if let device = selectedDevice, let error = selectedError {
-                errorLabel.text = "\(device.nameDevice) \(error.errorCode)"
+                errorLabel.text = "\(device.rawValue) \(error.errorCode)"
             }
         }
     }
