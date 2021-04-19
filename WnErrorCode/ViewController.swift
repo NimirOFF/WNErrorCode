@@ -29,19 +29,13 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIPickerViewDataSource {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch component {
-        case 0:
-            return errorDeta.device.count
-        case 1:
-            return errorDeta.errorByDevice.count
-        default:
-            return 0;
-        }
+        component == 0 ? errorDeta.device.count : errorDeta.errorByDevice.count
     }
 }
 
