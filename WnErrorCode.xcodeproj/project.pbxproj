@@ -15,6 +15,7 @@
 		9AC71932261B63EA00D42BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71930261B63EA00D42BA2 /* Main.storyboard */; };
 		9AC71934261B63EB00D42BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71933261B63EB00D42BA2 /* Assets.xcassets */; };
 		9AC71937261B63EB00D42BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71935261B63EB00D42BA2 /* LaunchScreen.storyboard */; };
+		F170DBBF262EEFCB00AD119F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170DBBE262EEFCB00AD119F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9AC71933261B63EB00D42BA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AC71936261B63EB00D42BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AC71938261B63EB00D42BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F170DBBE262EEFCB00AD119F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				9AC7192C261B63EA00D42BA2 /* SceneDelegate.swift */,
 				9AC7192E261B63EA00D42BA2 /* ViewController.swift */,
 				9A27FEC2261E295700C36068 /* errorViewController.swift */,
+				F170DBBE262EEFCB00AD119F /* Extensions.swift */,
 				9A5295FE262332D9001F6615 /* Model.swift */,
 				9AC71930261B63EA00D42BA2 /* Main.storyboard */,
 				9AC71933261B63EB00D42BA2 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A5295FF262332D9001F6615 /* Model.swift in Sources */,
+				F170DBBF262EEFCB00AD119F /* Extensions.swift in Sources */,
 				9A27FEC3261E295700C36068 /* errorViewController.swift in Sources */,
 				9AC7192F261B63EA00D42BA2 /* ViewController.swift in Sources */,
 				9AC7192B261B63EA00D42BA2 /* AppDelegate.swift in Sources */,

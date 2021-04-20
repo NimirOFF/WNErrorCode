@@ -16,7 +16,7 @@ enum Device: String{
 struct Error {
     var errorCode   : Int
     var errorText   : String
-    var errorPictire: UIImage?
+    var errorPictire: String?
     var device_id   : Device
 }
 
