@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     var errorDeta = DeviceData()
     
     var selectedDevice: Device = .CMD
-    var selectedError: Error?
+    lazy var selectedError: Error = {
+        errorDeta.errorByDevice = errorDeta.getErrors(device_id: selectedDevice)
+        return errorDeta.errorByDevice[0]
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +62,7 @@ extension ViewController: UIPickerViewDelegate {
             selectedError = errorDeta.errorByDevice[row]
         }
         
-        if let error = selectedError {
-            errorLabel.text = "\(selectedDevice.rawValue) \(error.errorCode)"
-        }
+        errorLabel.text = "\(selectedDevice.rawValue) \(selectedError.errorCode)"
     }
 }
 
