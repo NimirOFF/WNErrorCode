@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     var errorDeta = DeviceData()
     
-    var selectedDevice: Device?
+    var selectedDevice: Device = .CMD
     var selectedError: Error?
     
     override func viewDidLoad() {
@@ -46,26 +46,21 @@ extension ViewController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
         if component == 0 {
-            let device = errorDeta.device[row]
-            selectedDevice = device
-            errorDeta.errorByDevice = errorDeta.getErrors(device_id: device)
+            selectedDevice = errorDeta.device[row]
+            errorDeta.errorByDevice = errorDeta.getErrors(device_id: selectedDevice)
             pickerView.reloadComponent(1)
             pickerView.selectRow(0, inComponent: 1, animated: true)
             
-            let error = self.errorDeta.errorByDevice[0]
-            selectedError = error
-            
-            if let device = selectedDevice, let error = selectedError {
-                errorLabel.text = "\(device.rawValue) \(error.errorCode)"
-            }
+            selectedError = errorDeta.errorByDevice[0]
+
         } else {
-            let error = self.errorDeta.errorByDevice[row]
-            selectedError = error
-            
-            if let device = selectedDevice, let error = selectedError {
-                errorLabel.text = "\(device.rawValue) \(error.errorCode)"
-            }
+            selectedError = errorDeta.errorByDevice[row]
+        }
+        
+        if let error = selectedError {
+            errorLabel.text = "\(selectedDevice.rawValue) \(error.errorCode)"
         }
     }
 }
