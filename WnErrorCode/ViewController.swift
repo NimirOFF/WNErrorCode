@@ -14,7 +14,9 @@ class ViewController: UIViewController {
 
     var errorDeta = DeviceData()
     
-    var selectedDevice: Device = .CMD
+    lazy var selectedDevice: Device = {
+        errorDeta.device[0]
+    }()
     lazy var selectedError: Error = {
         errorDeta.errorByDevice = errorDeta.getErrors(device_id: selectedDevice)
         return errorDeta.errorByDevice[0]
@@ -27,7 +29,11 @@ class ViewController: UIViewController {
         errorLabel.text = ""
         devicePicker.dataSource = self
         devicePicker.delegate = self
-        
+        updateLabel()
+    }
+    
+    private func updateLabel(){
+        errorLabel.text = "\(selectedDevice.rawValue) \(selectedError.errorCode)"
     }
 }
 
@@ -62,7 +68,7 @@ extension ViewController: UIPickerViewDelegate {
             selectedError = errorDeta.errorByDevice[row]
         }
         
-        errorLabel.text = "\(selectedDevice.rawValue) \(selectedError.errorCode)"
+        updateLabel()
     }
 }
 
