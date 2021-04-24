@@ -11,7 +11,7 @@
         <!--Error View Controller-->
         <scene sceneID="HDW-s2-H3K">
             <objects>
-                <viewController storyboardIdentifier="cmdVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GZ6-iv-drX" customClass="errorViewController" customModule="WnErrorCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="errorVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GZ6-iv-drX" customClass="errorViewController" customModule="WnErrorCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SCf-IO-1Vv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,8 +28,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="beW-Gm-46E">
-                                <rect key="frame" x="20" y="294.5" width="314" height="210.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="beW-Gm-46E">
+                                <rect key="frame" x="20" y="294.5" width="374" height="251"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="beW-Gm-46E" secondAttribute="height" multiplier="307:206" id="5wz-q1-pnt"/>
                                 </constraints>
@@ -38,8 +38,8 @@
                         <viewLayoutGuide key="safeArea" id="1Rt-HL-OZu"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" secondItem="beW-Gm-46E" secondAttribute="trailing" constant="80" id="0eU-8R-Tt7"/>
                             <constraint firstItem="WKt-em-Ffn" firstAttribute="top" secondItem="ydW-Re-vvr" secondAttribute="bottom" constant="50" id="0zZ-VO-dGJ"/>
+                            <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" secondItem="beW-Gm-46E" secondAttribute="trailing" constant="20" id="3Cr-yb-d1Y"/>
                             <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ydW-Re-vvr" secondAttribute="trailing" constant="40" id="7ty-bc-3Yj"/>
                             <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WKt-em-Ffn" secondAttribute="trailing" constant="40" id="BMy-9O-7iY"/>
                             <constraint firstItem="ydW-Re-vvr" firstAttribute="top" secondItem="1Rt-HL-OZu" secondAttribute="top" constant="80" id="PbA-F0-xlu"/>
@@ -62,13 +62,13 @@
         <!--View Controller-->
         <scene sceneID="hJB-Yx-4XG">
             <objects>
-                <viewController id="WcK-zW-DYU" customClass="ViewController" customModule="WnErrorCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="WcK-zW-DYU" customClass="ViewController" customModule="WnErrorCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LjE-WV-sNe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-5f-qms">
-                                <rect key="frame" x="132" y="585" width="150" height="40"/>
+                                <rect key="frame" x="132" y="802" width="150" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="fO9-9y-2dM"/>
                                     <constraint firstAttribute="height" constant="40" id="nxK-tp-QSL"/>
@@ -77,6 +77,9 @@
                                 <state key="normal" title="Показать описание">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="showDescription:" destination="WcK-zW-DYU" eventType="touchUpInside" id="BqI-en-HMw"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lX-xf-OWn">
                                 <rect key="frame" x="5" y="249" width="404" height="216"/>
@@ -98,10 +101,10 @@
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="ALD-0b-YiN" firstAttribute="centerX" secondItem="OFz-0y-QJ9" secondAttribute="centerX" id="5NC-XJ-Anc"/>
+                            <constraint firstItem="OFz-0y-QJ9" firstAttribute="bottom" secondItem="a0T-5f-qms" secondAttribute="bottom" constant="20" id="5eC-x6-CkW"/>
                             <constraint firstItem="ALD-0b-YiN" firstAttribute="top" secondItem="OFz-0y-QJ9" secondAttribute="top" constant="20" id="Iba-BP-dQn"/>
                             <constraint firstItem="a0T-5f-qms" firstAttribute="centerX" secondItem="OFz-0y-QJ9" secondAttribute="centerX" id="R5j-O1-S7O"/>
                             <constraint firstItem="eul-vd-6q9" firstAttribute="top" secondItem="ALD-0b-YiN" secondAttribute="bottom" constant="20" id="YWe-1y-1hK"/>
-                            <constraint firstItem="a0T-5f-qms" firstAttribute="top" secondItem="4lX-xf-OWn" secondAttribute="bottom" constant="120" id="cYi-7v-vxz"/>
                             <constraint firstItem="eul-vd-6q9" firstAttribute="centerX" secondItem="OFz-0y-QJ9" secondAttribute="centerX" id="dY3-X2-0wq"/>
                             <constraint firstItem="4lX-xf-OWn" firstAttribute="leading" secondItem="OFz-0y-QJ9" secondAttribute="leading" constant="5" id="rrq-jM-fPc"/>
                             <constraint firstItem="OFz-0y-QJ9" firstAttribute="trailing" secondItem="4lX-xf-OWn" secondAttribute="trailing" constant="5" id="s6p-Hh-2Df"/>

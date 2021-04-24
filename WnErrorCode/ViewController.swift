@@ -12,14 +12,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var devicePicker: UIPickerView!
     @IBOutlet weak var errorLabel: UILabel!
 
-    var errorDeta = DeviceData()
+    var errorData = DeviceData()
     
     lazy var selectedDevice: Device = {
-        errorDeta.device[0]
+        errorData.device[0]
     }()
     lazy var selectedError: Error = {
-        errorDeta.errorByDevice = errorDeta.getErrors(device_id: selectedDevice)
-        return errorDeta.errorByDevice[0]
+        errorData.errorByDevice = errorData.getErrors(device_id: selectedDevice)
+        return errorData.errorByDevice[0]
     }()
     
     override func viewDidLoad() {
@@ -33,7 +33,18 @@ class ViewController: UIViewController {
     }
     
     private func updateLabel(){
-        errorLabel.text = "\(selectedDevice.rawValue) \(selectedError.errorCode)"
+        errorLabel.text = "\(selectedDevice.rawValue) \(String(format: "%02d",selectedError.errorCode))"
+    }
+    
+    @IBAction func showDescription (_ sender: UIButton) {
+        showScreen()
+    }
+    
+    private func showScreen() {
+        if let vc = storyboard?.instantiateViewController(identifier: "errorVC") as? errorViewController {
+            vc.descriptionError = selectedError
+            show(vc, sender: nil)
+        }
     }
 }
 
@@ -44,28 +55,28 @@ extension ViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        component == 0 ? errorDeta.device.count : errorDeta.errorByDevice.count
+        component == 0 ? errorData.device.count : errorData.errorByDevice.count
     }
 }
 
 extension ViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        (component == 0 ? errorDeta.device[row].rawValue : String(errorDeta.errorByDevice[row].errorCode))
+        (component == 0 ? errorData.device[row].rawValue : String(format: "%02d", errorData.errorByDevice[row].errorCode))
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if component == 0 {
-            selectedDevice = errorDeta.device[row]
-            errorDeta.errorByDevice = errorDeta.getErrors(device_id: selectedDevice)
+            selectedDevice = errorData.device[row]
+            errorData.errorByDevice = errorData.getErrors(device_id: selectedDevice)
             pickerView.reloadComponent(1)
             pickerView.selectRow(0, inComponent: 1, animated: true)
             
-            selectedError = errorDeta.errorByDevice[0]
+            selectedError = errorData.errorByDevice[0]
 
         } else {
-            selectedError = errorDeta.errorByDevice[row]
+            selectedError = errorData.errorByDevice[row]
         }
         
         updateLabel()
