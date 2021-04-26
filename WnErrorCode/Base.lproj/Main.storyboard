@@ -11,7 +11,7 @@
         <!--Error View Controller-->
         <scene sceneID="HDW-s2-H3K">
             <objects>
-                <viewController storyboardIdentifier="cmdVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GZ6-iv-drX" customClass="errorViewController" customModule="WnErrorCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="errorVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GZ6-iv-drX" customClass="errorViewController" customModule="WnErrorCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SCf-IO-1Vv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +44,7 @@
                         <constraints>
                             <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" secondItem="beW-Gm-46E" secondAttribute="trailing" constant="20" id="0eU-8R-Tt7"/>
                             <constraint firstItem="WKt-em-Ffn" firstAttribute="top" secondItem="ydW-Re-vvr" secondAttribute="bottom" constant="50" id="0zZ-VO-dGJ"/>
+                            <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" secondItem="beW-Gm-46E" secondAttribute="trailing" constant="20" id="3Cr-yb-d1Y"/>
                             <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ydW-Re-vvr" secondAttribute="trailing" constant="40" id="7ty-bc-3Yj"/>
                             <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WKt-em-Ffn" secondAttribute="trailing" constant="40" id="BMy-9O-7iY"/>
                             <constraint firstItem="ydW-Re-vvr" firstAttribute="top" secondItem="1Rt-HL-OZu" secondAttribute="top" constant="80" id="PbA-F0-xlu"/>
@@ -71,7 +72,7 @@
         <!--View Controller-->
         <scene sceneID="hJB-Yx-4XG">
             <objects>
-                <viewController id="WcK-zW-DYU" customClass="ViewController" customModule="WnErrorCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="WcK-zW-DYU" customClass="ViewController" customModule="WnErrorCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LjE-WV-sNe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +88,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="showError:" destination="WcK-zW-DYU" eventType="touchUpInside" id="e8w-7r-T8K"/>
+                                    <action selector="showDescription:" destination="WcK-zW-DYU" eventType="touchUpInside" id="idX-CG-VZc"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lX-xf-OWn">

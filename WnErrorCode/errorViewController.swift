@@ -20,7 +20,7 @@ class errorViewController: UIViewController {
         super.viewDidLoad()
         
         label.text = descriptionError.errorText
-        numberError.text = String(descriptionError.errorCode)
+        numberError.text = String(format: "%02d", descriptionError.errorCode)
         
         //how to use
         devicePic.loadAsyncImageFromFile(file: descriptionError.errorPictire)
