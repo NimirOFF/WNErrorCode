@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761928D4CC2254EDEDF7ED33 /* Pods_WnErrorCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9588D7FAC99D86CCE1422559 /* Pods_WnErrorCode.framework */; };
 		9A27FEC3261E295700C36068 /* errorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27FEC2261E295700C36068 /* errorViewController.swift */; };
 		9A5295FF262332D9001F6615 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5295FE262332D9001F6615 /* Model.swift */; };
 		9AC7192B261B63EA00D42BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7192A261B63EA00D42BA2 /* AppDelegate.swift */; };
@@ -16,9 +17,13 @@
 		9AC71934261B63EB00D42BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71933261B63EB00D42BA2 /* Assets.xcassets */; };
 		9AC71937261B63EB00D42BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71935261B63EB00D42BA2 /* LaunchScreen.storyboard */; };
 		F170DBBF262EEFCB00AD119F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170DBBE262EEFCB00AD119F /* Extensions.swift */; };
+		F1D90F2C2636E98D00969D35 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D90F2B2636E98D00969D35 /* 1.png */; };
+		F1D90F2F2636E99800969D35 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D90F2E2636E99800969D35 /* 2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A49EEAAD3F82343A48E3D0C /* Pods-WnErrorCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WnErrorCode.release.xcconfig"; path = "Target Support Files/Pods-WnErrorCode/Pods-WnErrorCode.release.xcconfig"; sourceTree = "<group>"; };
+		9588D7FAC99D86CCE1422559 /* Pods_WnErrorCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WnErrorCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A27FEC2261E295700C36068 /* errorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errorViewController.swift; sourceTree = "<group>"; };
 		9A5295FE262332D9001F6615 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9AC71927261B63EA00D42BA2 /* WnErrorCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WnErrorCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,7 +34,10 @@
 		9AC71933261B63EB00D42BA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AC71936261B63EB00D42BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AC71938261B63EB00D42BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0D8ADBD8D1F395514E06E89 /* Pods-WnErrorCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WnErrorCode.debug.xcconfig"; path = "Target Support Files/Pods-WnErrorCode/Pods-WnErrorCode.debug.xcconfig"; sourceTree = "<group>"; };
 		F170DBBE262EEFCB00AD119F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F1D90F2B2636E98D00969D35 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		F1D90F2E2636E99800969D35 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761928D4CC2254EDEDF7ED33 /* Pods_WnErrorCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0389909918938052F31733F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0D8ADBD8D1F395514E06E89 /* Pods-WnErrorCode.debug.xcconfig */,
+				1A49EEAAD3F82343A48E3D0C /* Pods-WnErrorCode.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		38738942E413D8C129B35783 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9588D7FAC99D86CCE1422559 /* Pods_WnErrorCode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9AC7191E261B63E900D42BA2 = {
 			isa = PBXGroup;
 			children = (
 				9AC71929261B63EA00D42BA2 /* WnErrorCode */,
 				9AC71928261B63EA00D42BA2 /* Products */,
+				0389909918938052F31733F7 /* Pods */,
+				38738942E413D8C129B35783 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +100,8 @@
 				9AC71933261B63EB00D42BA2 /* Assets.xcassets */,
 				9AC71935261B63EB00D42BA2 /* LaunchScreen.storyboard */,
 				9AC71938261B63EB00D42BA2 /* Info.plist */,
+				F1D90F2B2636E98D00969D35 /* 1.png */,
+				F1D90F2E2636E99800969D35 /* 2.png */,
 			);
 			path = WnErrorCode;
 			sourceTree = "<group>";
@@ -83,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AC7193B261B63EB00D42BA2 /* Build configuration list for PBXNativeTarget "WnErrorCode" */;
 			buildPhases = (
+				39D73FCA7EEB3788944EF914 /* [CP] Check Pods Manifest.lock */,
 				9AC71923261B63E900D42BA2 /* Sources */,
 				9AC71924261B63E900D42BA2 /* Frameworks */,
 				9AC71925261B63E900D42BA2 /* Resources */,
+				F7870D1BCDA8E9C01F31901B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +166,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC71937261B63EB00D42BA2 /* LaunchScreen.storyboard in Resources */,
+				F1D90F2C2636E98D00969D35 /* 1.png in Resources */,
+				F1D90F2F2636E99800969D35 /* 2.png in Resources */,
 				9AC71934261B63EB00D42BA2 /* Assets.xcassets in Resources */,
 				9AC71932261B63EA00D42BA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39D73FCA7EEB3788944EF914 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WnErrorCode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7870D1BCDA8E9C01F31901B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WnErrorCode/Pods-WnErrorCode-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WnErrorCode/Pods-WnErrorCode-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WnErrorCode/Pods-WnErrorCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9AC71923261B63E900D42BA2 /* Sources */ = {
@@ -295,6 +371,7 @@
 		};
 		9AC7193C261B63EB00D42BA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0D8ADBD8D1F395514E06E89 /* Pods-WnErrorCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,6 +394,7 @@
 		};
 		9AC7193D261B63EB00D42BA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A49EEAAD3F82343A48E3D0C /* Pods-WnErrorCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

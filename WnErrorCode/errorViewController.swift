@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JTSImageViewController
 
 class errorViewController: UIViewController {
     
@@ -23,5 +24,19 @@ class errorViewController: UIViewController {
         
         //how to use
         devicePic.loadAsyncImageFromFile(file: descriptionError.errorPictire)
+    }
+    
+    @IBAction func tapImageView(_ sender: Any) {
+        guard let image = devicePic.image else {
+            return
+        }
+        
+        let imageInfo = JTSImageInfo.init()
+        imageInfo.image = image
+        imageInfo.referenceRect = devicePic.frame
+        imageInfo.referenceView = view
+        
+        let vc = JTSImageViewController.init(imageInfo: imageInfo, mode: .image, backgroundStyle: .scaled)
+        vc?.show(from: self, transition: .fromOriginalPosition)
     }
 }

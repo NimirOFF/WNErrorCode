@@ -35,6 +35,14 @@ class ViewController: UIViewController {
     private func updateLabel(){
         errorLabel.text = "\(selectedDevice.rawValue) \(selectedError.errorCode)"
     }
+    
+    @IBAction func showError(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "cmdVC") as? errorViewController else {
+            return
+        }
+        vc.descriptionError = selectedError
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 extension ViewController: UIPickerViewDataSource {
