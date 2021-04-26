@@ -46,14 +46,6 @@ class ViewController: UIViewController {
             show(vc, sender: nil)
         }
     }
-    
-    @IBAction func showError(_ sender: Any) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "cmdVC") as? errorViewController else {
-            return
-        }
-        vc.descriptionError = selectedError
-        present(vc, animated: true, completion: nil)
-    }
 }
 
 extension ViewController: UIPickerViewDataSource {
