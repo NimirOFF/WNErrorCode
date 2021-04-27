@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKt-em-Ffn">
-                                <rect key="frame" x="20" y="204" width="41.5" height="20.5"/>
+                                <rect key="frame" x="20" y="124" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCOD: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydW-Re-vvr">
-                                <rect key="frame" x="20" y="124" width="80" height="30"/>
+                                <rect key="frame" x="20" y="64" width="80" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="beW-Gm-46E">
-                                <rect key="frame" x="20" y="294.5" width="374" height="251"/>
+                                <rect key="frame" x="20" y="225" width="374" height="251"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="beW-Gm-46E" secondAttribute="height" multiplier="307:206" id="5wz-q1-pnt"/>
                                 </constraints>
@@ -37,25 +37,35 @@
                                     <outletCollection property="gestureRecognizers" destination="cah-rl-7AU" appends="YES" id="I7E-e4-8SF"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aV-9C-Mga">
+                                <rect key="frame" x="20" y="174.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Rt-HL-OZu"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" secondItem="beW-Gm-46E" secondAttribute="trailing" constant="20" id="0eU-8R-Tt7"/>
-                            <constraint firstItem="WKt-em-Ffn" firstAttribute="top" secondItem="ydW-Re-vvr" secondAttribute="bottom" constant="50" id="0zZ-VO-dGJ"/>
+                            <constraint firstItem="WKt-em-Ffn" firstAttribute="top" secondItem="ydW-Re-vvr" secondAttribute="bottom" constant="30" id="0zZ-VO-dGJ"/>
+                            <constraint firstItem="6aV-9C-Mga" firstAttribute="top" secondItem="WKt-em-Ffn" secondAttribute="bottom" constant="30" id="2OC-jz-hOQ"/>
                             <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" secondItem="beW-Gm-46E" secondAttribute="trailing" constant="20" id="3Cr-yb-d1Y"/>
+                            <constraint firstItem="beW-Gm-46E" firstAttribute="top" secondItem="6aV-9C-Mga" secondAttribute="bottom" constant="30" id="75G-c2-wxf"/>
+                            <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6aV-9C-Mga" secondAttribute="trailing" constant="40" id="7IN-AO-AqO"/>
                             <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ydW-Re-vvr" secondAttribute="trailing" constant="40" id="7ty-bc-3Yj"/>
                             <constraint firstItem="1Rt-HL-OZu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WKt-em-Ffn" secondAttribute="trailing" constant="40" id="BMy-9O-7iY"/>
-                            <constraint firstItem="ydW-Re-vvr" firstAttribute="top" secondItem="1Rt-HL-OZu" secondAttribute="top" constant="80" id="PbA-F0-xlu"/>
+                            <constraint firstItem="ydW-Re-vvr" firstAttribute="top" secondItem="1Rt-HL-OZu" secondAttribute="top" constant="20" id="PbA-F0-xlu"/>
                             <constraint firstItem="WKt-em-Ffn" firstAttribute="leading" secondItem="1Rt-HL-OZu" secondAttribute="leading" constant="20" id="Y4r-A2-web"/>
                             <constraint firstItem="ydW-Re-vvr" firstAttribute="leading" secondItem="1Rt-HL-OZu" secondAttribute="leading" constant="20" id="i11-rx-0My"/>
-                            <constraint firstItem="beW-Gm-46E" firstAttribute="top" secondItem="WKt-em-Ffn" secondAttribute="bottom" constant="70" id="rip-Ff-tza"/>
                             <constraint firstItem="beW-Gm-46E" firstAttribute="leading" secondItem="1Rt-HL-OZu" secondAttribute="leading" constant="20" id="yba-f1-ruE"/>
+                            <constraint firstItem="6aV-9C-Mga" firstAttribute="leading" secondItem="1Rt-HL-OZu" secondAttribute="leading" constant="20" id="zyy-M4-np2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="devicePic" destination="beW-Gm-46E" id="AKI-eH-kdp"/>
+                        <outlet property="fixError" destination="6aV-9C-Mga" id="EFN-lD-BVM"/>
                         <outlet property="label" destination="WKt-em-Ffn" id="gOD-VA-kAh"/>
                         <outlet property="numberError" destination="ydW-Re-vvr" id="0Qq-n6-Eoe"/>
                     </connections>

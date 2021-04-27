@@ -15,12 +15,14 @@ class errorViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var numberError: UILabel!
     @IBOutlet weak var devicePic: UIImageView!
+    @IBOutlet weak var fixError: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = descriptionError.errorText
+        label.text = "Описание: \n\(descriptionError.errorText)"
         numberError.text = String(format: "%02d", descriptionError.errorCode)
+        fixError.text = "Решение: \n \(descriptionError.errorFix)"
         
         //how to use
         devicePic.loadAsyncImageFromFile(file: descriptionError.errorPictire)

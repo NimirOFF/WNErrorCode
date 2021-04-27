@@ -17,8 +17,6 @@
 		9AC71934261B63EB00D42BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71933261B63EB00D42BA2 /* Assets.xcassets */; };
 		9AC71937261B63EB00D42BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71935261B63EB00D42BA2 /* LaunchScreen.storyboard */; };
 		F170DBBF262EEFCB00AD119F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170DBBE262EEFCB00AD119F /* Extensions.swift */; };
-		F1D90F2C2636E98D00969D35 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D90F2B2636E98D00969D35 /* 1.png */; };
-		F1D90F2F2636E99800969D35 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D90F2E2636E99800969D35 /* 2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +34,6 @@
 		9AC71938261B63EB00D42BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0D8ADBD8D1F395514E06E89 /* Pods-WnErrorCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WnErrorCode.debug.xcconfig"; path = "Target Support Files/Pods-WnErrorCode/Pods-WnErrorCode.debug.xcconfig"; sourceTree = "<group>"; };
 		F170DBBE262EEFCB00AD119F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F1D90F2B2636E98D00969D35 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		F1D90F2E2636E99800969D35 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +96,6 @@
 				9AC71933261B63EB00D42BA2 /* Assets.xcassets */,
 				9AC71935261B63EB00D42BA2 /* LaunchScreen.storyboard */,
 				9AC71938261B63EB00D42BA2 /* Info.plist */,
-				F1D90F2B2636E98D00969D35 /* 1.png */,
-				F1D90F2E2636E99800969D35 /* 2.png */,
 			);
 			path = WnErrorCode;
 			sourceTree = "<group>";
@@ -166,8 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC71937261B63EB00D42BA2 /* LaunchScreen.storyboard in Resources */,
-				F1D90F2C2636E98D00969D35 /* 1.png in Resources */,
-				F1D90F2F2636E99800969D35 /* 2.png in Resources */,
 				9AC71934261B63EB00D42BA2 /* Assets.xcassets in Resources */,
 				9AC71932261B63EA00D42BA2 /* Main.storyboard in Resources */,
 			);
