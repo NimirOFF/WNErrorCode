@@ -4,5 +4,7 @@ use_frameworks!
 
 target 'WnErrorCode' do
   pod 'JTSImageViewController'
+  pod 'lottie-ios'
+
 
 end

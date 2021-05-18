@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        overrideUserInterfaceStyle = .light 
         errorLabel.text = ""
         devicePicker.dataSource = self
         devicePicker.delegate = self
@@ -82,45 +81,3 @@ extension ViewController: UIPickerViewDelegate {
         updateLabel()
     }
 }
-
-
-//    enum Errors: String{
-//        case emptyText = "Код ошибки не введен"
-//        case errorNotFound = "Ошибки с таким кодом не найдено"
-//    }
-//
-//
-//    @IBAction func findError (_ sender: UIButton) {
-//        guard let errorText = errorField.text,
-//              let errorNumber = Int(errorText)
-//        else {
-//            showCmdError(error: .emptyText)
-//            return
-//        }
-//        findErrorWith(code: errorNumber)
-//    }
-//
-//    private func findErrorWith(code: Int) {
-//        if let data = CMDError.first(where: {$0.errorCode == code}) {
-//            showScreen(data: data)
-//        } else {
-//            showCmdError(error: .errorNotFound)
-//        }
-//    }
-//
-//
-//
-//    private func showCmdError(error: Errors) {
-//        let alert = UIAlertController.init(title: "Error", message: error.rawValue, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction.init(title: "Ok", style: .cancel, handler: nil))
-//        show(alert, sender: nil)
-//    }
-//
-//    private func showScreen(data: DeviceErrorCmd) {
-//        if let vc = storyboard?.instantiateViewController(identifier: "cmdVC") as? cmdViewController {
-//            vc.error = data
-//            vc.sCode = data
-//            vc.image = data
-//            show(vc, sender: nil)
-//        }
-//    }
