@@ -13,6 +13,7 @@ class ErrorViewController: UIViewController {
     struct ErrorViewContollerDataInput {
         let router: IRouterErrorVC
         let descriptionError: Error
+        var imageLoader: IImageLoaderInput?
     }
     
     var inputData:ErrorViewContollerDataInput!
@@ -29,7 +30,7 @@ class ErrorViewController: UIViewController {
         label.text = "Описание: \n\(error.errorText)"
         numberError.text = String(format: "%02d", error.errorCode)
         fixError.text = "Решение: \n\(error.errorFix)"
-        devicePic.loadAsyncImageFromFile(file: error.errorPictire)
+        inputData.imageLoader?.loadImage(name: error.errorPictire, imageView: devicePic)
     }
     
     @IBAction func tapImageView(_ sender: Any) {

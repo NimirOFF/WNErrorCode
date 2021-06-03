@@ -11,20 +11,16 @@ import Lottie
 class SplashViewController: UIViewController {
     
     var router: IRouterSplash?
-    
-    @IBOutlet weak var launchAnimation: AnimationView!
-    
+    var animation: IAnimateInput?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAnimation()
     }
     
     private func setupAnimation() {
-        launchAnimation.animation = Animation.named("1131-atm")
-        launchAnimation.animationSpeed = 0.8
-        launchAnimation.contentMode = .scaleAspectFit
-        launchAnimation.play {[weak self] (done) in
+        animation?.runATMAnimation(in: view, completion: {[weak self] (_) in
             self?.router?.showMainViewController()
-        }
+        })
     }
 }

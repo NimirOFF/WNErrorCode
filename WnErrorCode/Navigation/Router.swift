@@ -21,9 +21,11 @@ protocol IRouterSplash {
     func showMainViewController()
 }
 
-protocol IRouterAll: IRouterSplash, IRouterErrorVC, IRouterMainVC {
+protocol IRouterAppDelegate {
     func showSplash() -> UIViewController
 }
+
+protocol IRouterAll: IRouterSplash, IRouterErrorVC, IRouterMainVC, IRouterAppDelegate{}
 
 class Router {
     
@@ -63,6 +65,9 @@ extension Router: IRouterAll{
     }
     
     func openImage(imageInfo: JTSImageInfo) {
-        builder.getImageScreen(imageInfo: imageInfo).show(from: getLastViewController()!.presentedViewController, transition: .fromOriginalPosition)
+        builder.getImageScreen(imageInfo: imageInfo).show(
+            from: getLastViewController()!.presentedViewController,
+            transition: .fromOriginalPosition
+        )
     }
 }

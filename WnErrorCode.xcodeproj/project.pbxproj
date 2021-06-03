@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		761928D4CC2254EDEDF7ED33 /* Pods_WnErrorCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9588D7FAC99D86CCE1422559 /* Pods_WnErrorCode.framework */; };
+		8B67529C2668B45400559CDE /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B67529B2668B45400559CDE /* ModuleBuilder.swift */; };
+		8B6752A52668B4F800559CDE /* Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6752A42668B4F800559CDE /* Animate.swift */; };
 		8BA12C2126687A3600DFE2DD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA12C1F26687A3600DFE2DD /* SplashViewController.swift */; };
 		8BA12C2226687A3600DFE2DD /* 1131-atm.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BA12C2026687A3600DFE2DD /* 1131-atm.json */; };
 		8BA12C4626687E7700DFE2DD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA12C4526687E7700DFE2DD /* Router.swift */; };
 		8BA12C4926687E8000DFE2DD /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA12C4826687E8000DFE2DD /* Builder.swift */; };
+		8BFB00E02668BC5800E8C6D6 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB00DF2668BC5800E8C6D6 /* ImageLoader.swift */; };
 		9A27FEC3261E295700C36068 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27FEC2261E295700C36068 /* ErrorViewController.swift */; };
 		9A5295FF262332D9001F6615 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5295FE262332D9001F6615 /* Model.swift */; };
 		9AC7192B261B63EA00D42BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7192A261B63EA00D42BA2 /* AppDelegate.swift */; };
@@ -24,10 +27,13 @@
 
 /* Begin PBXFileReference section */
 		1A49EEAAD3F82343A48E3D0C /* Pods-WnErrorCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WnErrorCode.release.xcconfig"; path = "Target Support Files/Pods-WnErrorCode/Pods-WnErrorCode.release.xcconfig"; sourceTree = "<group>"; };
+		8B67529B2668B45400559CDE /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		8B6752A42668B4F800559CDE /* Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animate.swift; sourceTree = "<group>"; };
 		8BA12C1F26687A3600DFE2DD /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		8BA12C2026687A3600DFE2DD /* 1131-atm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1131-atm.json"; sourceTree = "<group>"; };
 		8BA12C4526687E7700DFE2DD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8BA12C4826687E8000DFE2DD /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		8BFB00DF2668BC5800E8C6D6 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		9588D7FAC99D86CCE1422559 /* Pods_WnErrorCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WnErrorCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A27FEC2261E295700C36068 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		9A5295FE262332D9001F6615 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -69,6 +75,33 @@
 				9588D7FAC99D86CCE1422559 /* Pods_WnErrorCode.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B67529E2668B48B00559CDE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8BA12C4526687E7700DFE2DD /* Router.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		8B6752A02668B49700559CDE /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				8BA12C4826687E8000DFE2DD /* Builder.swift */,
+				8B67529B2668B45400559CDE /* ModuleBuilder.swift */,
+				8B6752A72668B4FE00559CDE /* Modules */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		8B6752A72668B4FE00559CDE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8B6752A42668B4F800559CDE /* Animate.swift */,
+				8BFB00DF2668BC5800E8C6D6 /* ImageLoader.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		8BA12C3D26687D0600DFE2DD /* ViewControllers */ = {
@@ -130,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				9AC7192A261B63EA00D42BA2 /* AppDelegate.swift */,
-				8BA12C4526687E7700DFE2DD /* Router.swift */,
-				8BA12C4826687E8000DFE2DD /* Builder.swift */,
+				8B67529E2668B48B00559CDE /* Navigation */,
+				8B6752A02668B49700559CDE /* Builders */,
 				8BA12C3D26687D0600DFE2DD /* ViewControllers */,
 				8BA12C4226687D2500DFE2DD /* Helpers */,
 				8BA12C3F26687D1100DFE2DD /* Models */,
@@ -261,9 +294,12 @@
 				9A27FEC3261E295700C36068 /* ErrorViewController.swift in Sources */,
 				8BA12C4626687E7700DFE2DD /* Router.swift in Sources */,
 				9AC7192F261B63EA00D42BA2 /* MainViewController.swift in Sources */,
+				8BFB00E02668BC5800E8C6D6 /* ImageLoader.swift in Sources */,
+				8B67529C2668B45400559CDE /* ModuleBuilder.swift in Sources */,
 				9AC7192B261B63EA00D42BA2 /* AppDelegate.swift in Sources */,
 				8BA12C2126687A3600DFE2DD /* SplashViewController.swift in Sources */,
 				8BA12C4926687E8000DFE2DD /* Builder.swift in Sources */,
+				8B6752A52668B4F800559CDE /* Animate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func configureDI(){
-        let builder = Builder()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let router = Router(builder: builder)
+        let builder = Builder(moduleBuilder: ModuleBuilder())
+        let router: IRouterAppDelegate = Router(builder: builder)
         window?.rootViewController = router.showSplash()
         window?.makeKeyAndVisible()
     }

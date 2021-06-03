@@ -21,6 +21,11 @@ protocol IBuilderInput {
 
 class Builder {
     private let sb = UIStoryboard.init(name: "Main", bundle: nil)
+    private let moduleBuilder: IModuleBulderInput
+    
+    init(moduleBuilder: IModuleBulderInput) {
+        self.moduleBuilder = moduleBuilder
+    }
 }
 
 extension Builder: IBuilderInput{
@@ -29,6 +34,7 @@ extension Builder: IBuilderInput{
         let vc = getVCFromName(name: .splash)
         if let vc = vc as? SplashViewController{
             vc.router = router
+            vc.animation = moduleBuilder.animation
         }
         return vc
     }
@@ -37,6 +43,7 @@ extension Builder: IBuilderInput{
         let vc = getVCFromName(name: .errorVC)
         if let vc = vc as? ErrorViewController{
             vc.inputData = data
+            vc.inputData.imageLoader = moduleBuilder.imageLoader
         }
         return vc
     }
