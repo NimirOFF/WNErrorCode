@@ -8,9 +8,14 @@
 import UIKit
 import JTSImageViewController
 
-class errorViewController: UIViewController {
+class ErrorViewController: UIViewController {
     
-    var descriptionError: Error!
+    struct ErrorViewContollerDataInput {
+        let router: IRouterErrorVC
+        let descriptionError: Error
+    }
+    
+    var inputData:ErrorViewContollerDataInput!
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var numberError: UILabel!
@@ -20,12 +25,11 @@ class errorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = "Описание: \n\(descriptionError.errorText)"
-        numberError.text = String(format: "%02d", descriptionError.errorCode)
-        fixError.text = "Решение: \n\(descriptionError.errorFix)"
-        
-        //how to use
-        devicePic.loadAsyncImageFromFile(file: descriptionError.errorPictire)
+        let error = inputData.descriptionError
+        label.text = "Описание: \n\(error.errorText)"
+        numberError.text = String(format: "%02d", error.errorCode)
+        fixError.text = "Решение: \n\(error.errorFix)"
+        devicePic.loadAsyncImageFromFile(file: error.errorPictire)
     }
     
     @IBAction func tapImageView(_ sender: Any) {
@@ -38,7 +42,6 @@ class errorViewController: UIViewController {
         imageInfo.referenceRect = devicePic.frame
         imageInfo.referenceView = view
         
-        let vc = JTSImageViewController.init(imageInfo: imageInfo, mode: .image, backgroundStyle: .scaled)
-        vc?.show(from: self, transition: .fromOriginalPosition)
+        inputData.router.openImage(imageInfo: imageInfo)
     }
 }

@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		761928D4CC2254EDEDF7ED33 /* Pods_WnErrorCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9588D7FAC99D86CCE1422559 /* Pods_WnErrorCode.framework */; };
-		9A27FEC3261E295700C36068 /* errorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27FEC2261E295700C36068 /* errorViewController.swift */; };
+		8BA12C2126687A3600DFE2DD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA12C1F26687A3600DFE2DD /* SplashViewController.swift */; };
+		8BA12C2226687A3600DFE2DD /* 1131-atm.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BA12C2026687A3600DFE2DD /* 1131-atm.json */; };
+		8BA12C4626687E7700DFE2DD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA12C4526687E7700DFE2DD /* Router.swift */; };
+		8BA12C4926687E8000DFE2DD /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA12C4826687E8000DFE2DD /* Builder.swift */; };
+		9A27FEC3261E295700C36068 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27FEC2261E295700C36068 /* ErrorViewController.swift */; };
 		9A5295FF262332D9001F6615 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5295FE262332D9001F6615 /* Model.swift */; };
 		9AC7192B261B63EA00D42BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7192A261B63EA00D42BA2 /* AppDelegate.swift */; };
-		9AC7192D261B63EA00D42BA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7192C261B63EA00D42BA2 /* SceneDelegate.swift */; };
-		9AC7192F261B63EA00D42BA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7192E261B63EA00D42BA2 /* ViewController.swift */; };
+		9AC7192F261B63EA00D42BA2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7192E261B63EA00D42BA2 /* MainViewController.swift */; };
 		9AC71932261B63EA00D42BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71930261B63EA00D42BA2 /* Main.storyboard */; };
 		9AC71934261B63EB00D42BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71933261B63EB00D42BA2 /* Assets.xcassets */; };
 		9AC71937261B63EB00D42BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC71935261B63EB00D42BA2 /* LaunchScreen.storyboard */; };
@@ -21,13 +24,16 @@
 
 /* Begin PBXFileReference section */
 		1A49EEAAD3F82343A48E3D0C /* Pods-WnErrorCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WnErrorCode.release.xcconfig"; path = "Target Support Files/Pods-WnErrorCode/Pods-WnErrorCode.release.xcconfig"; sourceTree = "<group>"; };
+		8BA12C1F26687A3600DFE2DD /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		8BA12C2026687A3600DFE2DD /* 1131-atm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1131-atm.json"; sourceTree = "<group>"; };
+		8BA12C4526687E7700DFE2DD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		8BA12C4826687E8000DFE2DD /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		9588D7FAC99D86CCE1422559 /* Pods_WnErrorCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WnErrorCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A27FEC2261E295700C36068 /* errorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errorViewController.swift; sourceTree = "<group>"; };
+		9A27FEC2261E295700C36068 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		9A5295FE262332D9001F6615 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9AC71927261B63EA00D42BA2 /* WnErrorCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WnErrorCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC7192A261B63EA00D42BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9AC7192C261B63EA00D42BA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9AC7192E261B63EA00D42BA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9AC7192E261B63EA00D42BA2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9AC71931261B63EA00D42BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AC71933261B63EB00D42BA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AC71936261B63EB00D42BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +71,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8BA12C3D26687D0600DFE2DD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BA12C1F26687A3600DFE2DD /* SplashViewController.swift */,
+				9AC7192E261B63EA00D42BA2 /* MainViewController.swift */,
+				9A27FEC2261E295700C36068 /* ErrorViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8BA12C3F26687D1100DFE2DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A5295FE262332D9001F6615 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8BA12C4126687D1C00DFE2DD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9AC71930261B63EA00D42BA2 /* Main.storyboard */,
+				9AC71933261B63EB00D42BA2 /* Assets.xcassets */,
+				9AC71935261B63EB00D42BA2 /* LaunchScreen.storyboard */,
+				8BA12C2026687A3600DFE2DD /* 1131-atm.json */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8BA12C4226687D2500DFE2DD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F170DBBE262EEFCB00AD119F /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		9AC7191E261B63E900D42BA2 = {
 			isa = PBXGroup;
 			children = (
@@ -87,14 +130,12 @@
 			isa = PBXGroup;
 			children = (
 				9AC7192A261B63EA00D42BA2 /* AppDelegate.swift */,
-				9AC7192C261B63EA00D42BA2 /* SceneDelegate.swift */,
-				9AC7192E261B63EA00D42BA2 /* ViewController.swift */,
-				9A27FEC2261E295700C36068 /* errorViewController.swift */,
-				F170DBBE262EEFCB00AD119F /* Extensions.swift */,
-				9A5295FE262332D9001F6615 /* Model.swift */,
-				9AC71930261B63EA00D42BA2 /* Main.storyboard */,
-				9AC71933261B63EB00D42BA2 /* Assets.xcassets */,
-				9AC71935261B63EB00D42BA2 /* LaunchScreen.storyboard */,
+				8BA12C4526687E7700DFE2DD /* Router.swift */,
+				8BA12C4826687E8000DFE2DD /* Builder.swift */,
+				8BA12C3D26687D0600DFE2DD /* ViewControllers */,
+				8BA12C4226687D2500DFE2DD /* Helpers */,
+				8BA12C3F26687D1100DFE2DD /* Models */,
+				8BA12C4126687D1C00DFE2DD /* UI */,
 				9AC71938261B63EB00D42BA2 /* Info.plist */,
 			);
 			path = WnErrorCode;
@@ -161,6 +202,7 @@
 			files = (
 				9AC71937261B63EB00D42BA2 /* LaunchScreen.storyboard in Resources */,
 				9AC71934261B63EB00D42BA2 /* Assets.xcassets in Resources */,
+				8BA12C2226687A3600DFE2DD /* 1131-atm.json in Resources */,
 				9AC71932261B63EA00D42BA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,10 +258,12 @@
 			files = (
 				9A5295FF262332D9001F6615 /* Model.swift in Sources */,
 				F170DBBF262EEFCB00AD119F /* Extensions.swift in Sources */,
-				9A27FEC3261E295700C36068 /* errorViewController.swift in Sources */,
-				9AC7192F261B63EA00D42BA2 /* ViewController.swift in Sources */,
+				9A27FEC3261E295700C36068 /* ErrorViewController.swift in Sources */,
+				8BA12C4626687E7700DFE2DD /* Router.swift in Sources */,
+				9AC7192F261B63EA00D42BA2 /* MainViewController.swift in Sources */,
 				9AC7192B261B63EA00D42BA2 /* AppDelegate.swift in Sources */,
-				9AC7192D261B63EA00D42BA2 /* SceneDelegate.swift in Sources */,
+				8BA12C2126687A3600DFE2DD /* SplashViewController.swift in Sources */,
+				8BA12C4926687E8000DFE2DD /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

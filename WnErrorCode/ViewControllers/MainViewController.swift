@@ -7,17 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var devicePicker: UIPickerView!
     @IBOutlet weak var errorLabel: UILabel!
 
-    var errorData = DeviceData()
+    var router: IRouterMainVC?
+    private var errorData = DeviceData()
     
-    lazy var selectedDevice: Device = {
+    private lazy var selectedDevice: Device = {
         errorData.device[0]
     }()
-    lazy var selectedError: Error = {
+    private lazy var selectedError: Error = {
         errorData.errorByDevice = errorData.getErrors(device_id: selectedDevice)
         return errorData.errorByDevice[0]
     }()
@@ -40,14 +41,11 @@ class ViewController: UIViewController {
     }
     
     private func showScreen() {
-        if let vc = storyboard?.instantiateViewController(identifier: "errorVC") as? errorViewController {
-            vc.descriptionError = selectedError
-            show(vc, sender: nil)
-        }
+        router?.showErrorViewController(error: selectedError)
     }
 }
 
-extension ViewController: UIPickerViewDataSource {
+extension MainViewController: UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         2
@@ -58,7 +56,7 @@ extension ViewController: UIPickerViewDataSource {
     }
 }
 
-extension ViewController: UIPickerViewDelegate {
+extension MainViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         (component == 0 ? errorData.device[row].rawValue : String(format: "%02d", errorData.errorByDevice[row].errorCode))
