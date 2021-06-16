@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     private func showScreen() {
-        if let vc = storyboard?.instantiateViewController(identifier: "errorVC") as? errorViewController {
+        if let vc = storyboard?.instantiateViewController(identifier: "errorVC") as? ErrorViewController {
             vc.descriptionError = selectedError
             show(vc, sender: nil)
         }

@@ -1,16 +1,20 @@
 PODS:
   - JTSImageViewController (1.5.1)
+  - lottie-ios (3.2.3)
 
 DEPENDENCIES:
   - JTSImageViewController
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
     - JTSImageViewController
+    - lottie-ios
 
 SPEC CHECKSUMS:
   JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
 
-PODFILE CHECKSUM: b085a23871fc97805f5d341a604e5a01efe33ba6
+PODFILE CHECKSUM: 91b67c9e76b4477a0fda517c39e80aa7ced4def4
 
 COCOAPODS: 1.10.1

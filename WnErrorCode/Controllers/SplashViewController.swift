@@ -13,8 +13,6 @@ class SplashViewController: UIViewController {
     
     let launchAnimation = AnimationView()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +20,7 @@ class SplashViewController: UIViewController {
     }
     
     func setupAnimation() {
-        launchAnimation.animation = Animation.named("1131-atm")
+        launchAnimation.animation = Animation.named("atm")
         launchAnimation.animationSpeed = 0.8
         launchAnimation.frame = view.bounds
         launchAnimation.backgroundColor = .systemGray6

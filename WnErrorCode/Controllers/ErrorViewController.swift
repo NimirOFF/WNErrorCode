@@ -8,11 +8,11 @@
 import UIKit
 import JTSImageViewController
 
-class errorViewController: UIViewController {
+class ErrorViewController: UIViewController {
     
     var descriptionError: Error!
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var textError: UILabel!
     @IBOutlet weak var numberError: UILabel!
     @IBOutlet weak var devicePic: UIImageView!
     @IBOutlet weak var fixError: UILabel!
@@ -20,11 +20,11 @@ class errorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = "Описание: \n\(descriptionError.errorText)"
+        textError.text = "Описание: \n\(descriptionError.errorText)"
         numberError.text = String(format: "%02d", descriptionError.errorCode)
         fixError.text = "Решение: \n\(descriptionError.errorFix)"
         
-        //how to use
+        
         devicePic.loadAsyncImageFromFile(file: descriptionError.errorPictire)
     }
     
