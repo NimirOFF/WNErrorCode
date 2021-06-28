@@ -21,7 +21,7 @@ class ErrorViewController: UIViewController {
         super.viewDidLoad()
         
         textError.text = "Описание: \n\(descriptionError.errorText)"
-        numberError.text = String(format: "%02d", descriptionError.errorCode)
+        numberError.text = "SCOD: \(String(format: "%02d", descriptionError.errorCode))"
         fixError.text = "Решение: \n\(descriptionError.errorFix)"
         
         
